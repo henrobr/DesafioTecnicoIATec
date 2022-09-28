@@ -41,7 +41,7 @@ namespace Api.Controllers
                     erros.Add(new ValidationResult("Cliente não encontrado. "));
 
                 //verifica vendedor
-                var vendedor = await context.Vendas.SingleOrDefaultAsync(f => f.Id == form.IdVendedor);
+                var vendedor = await context.Vendedores.SingleOrDefaultAsync(f => f.Id == form.IdVendedor);
                 if (vendedor == null)
                     erros.Add(new ValidationResult("Vendedor não encontrado. "));
 
